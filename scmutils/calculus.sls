@@ -216,49 +216,49 @@
 (define user-generic-environment (interaction-environment))
 
 ;;; FBE: from mechanics
-;;(include "./scmutils/mechanics/rotation.scm")
+;;(include "mechanics/rotation.scm")
 
 ;;; **** calculus **********************************
 
-(include "./scmutils/calculus/dgutils.scm")
+(include "calculus/dgutils.scm")
 
-(include "./scmutils/calculus/indexed.scm")
+(include "calculus/indexed.scm")
 
-(include "./scmutils/calculus/manifold.scm")
-(include "./scmutils/calculus/vector-fields.scm")
-(include "./scmutils/calculus/form-fields.scm")
-(include "./scmutils/calculus/basis.scm")
+(include "calculus/manifold.scm")
+(include "calculus/vector-fields.scm")
+(include "calculus/form-fields.scm")
+(include "calculus/basis.scm")
 
-(include "./scmutils/calculus/wedge.scm")
-(include "./scmutils/calculus/exterior-derivative.scm")
-(include "./scmutils/calculus/Lie.scm")
-(include "./scmutils/calculus/interior-product.scm")
-(include "./scmutils/calculus/ode.scm")
+(include "calculus/wedge.scm")
+(include "calculus/exterior-derivative.scm")
+(include "calculus/Lie.scm")
+(include "calculus/interior-product.scm")
+(include "calculus/ode.scm")
 
-(include "./scmutils/calculus/maps.scm")
+(include "calculus/maps.scm")
 
-(include "./scmutils/calculus/covariant-derivative.scm")
-(include "./scmutils/calculus/curvature.scm")
-(include "./scmutils/calculus/metric.scm")
+(include "calculus/covariant-derivative.scm")
+(include "calculus/curvature.scm")
+(include "calculus/metric.scm")
 ;; Connection derived from metric
-(include "./scmutils/calculus/connection.scm")
+(include "calculus/connection.scm")
 
 ;; Hodge star depends on metric
-(include "./scmutils/calculus/gram-schmidt.scm")
+(include "calculus/gram-schmidt.scm")
 ;; gram-schmidt runs very slowly!
-(include "./scmutils/calculus/hodge-star.scm")
+(include "calculus/hodge-star.scm")
 
-(include "./scmutils/calculus/tensors.scm")
+(include "calculus/tensors.scm")
 
-(include "./scmutils/calculus/vector-calculus.scm")
+(include "calculus/vector-calculus.scm")
 
-;;(include "./scmutils/calculus/so3" SO3-environment) ; FBE
+;;(include "calculus/so3" SO3-environment) ; FBE
 
 ;; special relativity
 ;;; FBE in '(scmutils base)
-;;(include "./scmutils/calculus/frame-maker" scmutils-base-environment)
+;;(include "calculus/frame-maker" scmutils-base-environment)
 
-(include "./scmutils/calculus/SR-boost.scm")
-(include "./scmutils/calculus/SR-frames.scm")
+(include "calculus/SR-boost.scm")
+(include "calculus/SR-frames.scm")
 
 )

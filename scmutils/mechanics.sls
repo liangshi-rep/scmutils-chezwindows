@@ -201,51 +201,51 @@
 
 ;;; **** mechanics **********************************
 
-(include "./scmutils/mechanics/rotation.scm")
+(include "mechanics/rotation.scm")
 
 ;;; Chapter 1
 
 ;;; FBE: we include this in '(scmutils generic)
-;;(include "./scmutils/mechanics/universal.scm")
-(include "./scmutils/mechanics/Lagrangian.scm")
-(include "./scmutils/mechanics/action.scm")
-(include "./scmutils/mechanics/Lagrangian-evolution.scm")
-(include "./scmutils/mechanics/gamma-bar.scm")
-(include "./scmutils/mechanics/Lagrangian-transformations.scm")
-(include "./scmutils/mechanics/Noether.scm")
+;;(include "mechanics/universal.scm")
+(include "mechanics/Lagrangian.scm")
+(include "mechanics/action.scm")
+(include "mechanics/Lagrangian-evolution.scm")
+(include "mechanics/gamma-bar.scm")
+(include "mechanics/Lagrangian-transformations.scm")
+(include "mechanics/Noether.scm")
 
 ;;; Chapter 2
 
-(include "./scmutils/mechanics/rigid.scm")
+(include "mechanics/rigid.scm")
 
 ;;; Chapter 3
 
 ;; defines 'Lie-derivative'.  A more general definition is in calculus/Lie.scm
-(include "./scmutils/mechanics/Hamiltonian.scm")
-(include "./scmutils/mechanics/Routhian.scm")
-(include "./scmutils/mechanics/Hamiltonian-evolution.scm")
+(include "mechanics/Hamiltonian.scm")
+(include "mechanics/Routhian.scm")
+(include "mechanics/Hamiltonian-evolution.scm")
 
 ;;; FBE: this is loaded into (scmutils base)
-;;(include "./scmutils/mechanics/sections.scm" scmutils-base-environment)
+;;(include "mechanics/sections.scm" scmutils-base-environment)
 
 ;;; Chapter 4
 
-(include "./scmutils/mechanics/qualitative.scm")
+(include "mechanics/qualitative.scm")
 
 ;;; Chapter 5
 
-(include "./scmutils/mechanics/point-transformation.scm")
-(include "./scmutils/mechanics/canonical.scm")
-(include "./scmutils/mechanics/symplectic.scm")
+(include "mechanics/point-transformation.scm")
+(include "mechanics/canonical.scm")
+(include "mechanics/symplectic.scm")
 
-(include "./scmutils/mechanics/time-varying.scm")
+(include "mechanics/time-varying.scm")
 
-(include "./scmutils/mechanics/generating-functions.scm")
-(include "./scmutils/mechanics/time-evolution.scm")
-(include "./scmutils/mechanics/Lie-transform.scm")
+(include "mechanics/generating-functions.scm")
+(include "mechanics/time-evolution.scm")
+(include "mechanics/Lie-transform.scm")
 
 ;;; Chapter 6
 
-(include "./scmutils/mechanics/pendulum.scm")
+(include "mechanics/pendulum.scm")
 
 )

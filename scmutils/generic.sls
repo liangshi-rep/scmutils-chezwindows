@@ -90,19 +90,19 @@
                 void vector-copy)
           (scmutils base))
 
-(include "./scmutils/kernel/fbe2-genenv.scm")
+(include "kernel/fbe2-genenv.scm")
 
-(include "./scmutils/poly/interp-generic.scm")
+(include "poly/interp-generic.scm")
 
-(include "./scmutils/poly/lagrange.scm")
+(include "poly/lagrange.scm")
 
-(include "./scmutils/units/hms-dms-radians.scm")
+(include "units/hms-dms-radians.scm")
 
-(include "./scmutils/units/convert.scm")
+(include "units/convert.scm")
 
 ;;; **************************************
 
-(include "./scmutils/mechanics/universal.scm")
+(include "mechanics/universal.scm")
 
 (define (Sigma a b proc)
   (g:sigma proc a b))

@@ -124,7 +124,7 @@ USA.
 
 (define / (symbolic-operator '/))
 
-;;(include "./scmutils/kernel/numsymb-defs.scm")
-;;(include "./scmutils/kernel/numsymb-init.scm")
+;;(include "kernel/numsymb-defs.scm")
+;;(include "kernel/numsymb-init.scm")
 
 )

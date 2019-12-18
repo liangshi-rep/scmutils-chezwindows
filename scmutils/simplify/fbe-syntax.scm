@@ -33,7 +33,7 @@ USA.
 
 (define-syntax rule-system
   (lambda (x)
-    (include "./scmutils/simplify/rule-syntax.scm")
+    (include "simplify/rule-syntax.scm")
     (syntax-case x ()
       ((rule-system form ...)
        #`(let ()

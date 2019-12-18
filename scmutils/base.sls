@@ -1151,44 +1151,44 @@
 (define derivative-symbol (string->symbol "D"))
 
 ;;; **** general **********************************
-(include "./scmutils/general/weak.scm")
-(include "./scmutils/general/memoize.scm")
-(include "./scmutils/general/hashcons.scm")
+(include "general/weak.scm")
+(include "general/memoize.scm")
+(include "general/hashcons.scm")
 
-(include "./scmutils/general/resource-limit.scm")
+(include "general/resource-limit.scm")
 
-(include "./scmutils/general/stack-queue.scm")
-;;(include "./scmutils/general/ambsch.scm")
+(include "general/stack-queue.scm")
+;;(include "general/ambsch.scm")
 
-(include "./scmutils/general/logic-utils.scm")
+(include "general/logic-utils.scm")
 
-(include "./scmutils/general/list-utils.scm")
+(include "general/list-utils.scm")
 
-(include "./scmutils/general/table.scm")
-(include "./scmutils/general/sets.scm")
-(include "./scmutils/general/permute.scm")
-;;(include "./scmutils/general/line-prefix.scm")
+(include "general/table.scm")
+(include "general/sets.scm")
+(include "general/permute.scm")
+;;(include "general/line-prefix.scm")
 
-(include "./scmutils/general/eq-properties.scm")
-(include "./scmutils/general/gjs-cselim.scm")
+(include "general/eq-properties.scm")
+(include "general/gjs-cselim.scm")
 
 ;;; **** kernel **********************************
 (define +pi (* 4 (atan 1 1)))
 (define +2pi (* 2 +pi))
 
-(include "./scmutils/kernel/numeric.scm")
-(include "./scmutils/kernel/utils.scm")
-(include "./scmutils/kernel/iterat.scm")
-(include "./scmutils/kernel/express.scm")
+(include "kernel/numeric.scm")
+(include "kernel/utils.scm")
+(include "kernel/iterat.scm")
+(include "kernel/express.scm")
 
-(include "./scmutils/kernel/ghelper.scm")
-(include "./scmutils/kernel/generic.scm")
-(include "./scmutils/kernel/mathutil.scm")
-(include "./scmutils/kernel/strutl.scm")
+(include "kernel/ghelper.scm")
+(include "kernel/generic.scm")
+(include "kernel/mathutil.scm")
+(include "kernel/strutl.scm")
 
-(include "./scmutils/kernel/fbe-extapply.scm")
+(include "kernel/fbe-extapply.scm")
 
-(include "./scmutils/kernel/types.scm")
+(include "kernel/types.scm")
 
 (define (diff-memoize-1arg f) f)
 (define (diff-memoize-2arg f) f)
@@ -1198,27 +1198,27 @@
 ;;;(define (diff-memoize f) (linear-memoize f))
 ;;;(define (diff-memoize f) (hash-memoize f))
 
-(include "./scmutils/kernel/modarith.scm")
-(include "./scmutils/kernel/diff.scm")
-(include "./scmutils/kernel/deriv.scm")
-(include "./scmutils/kernel/operator.scm")
-(include "./scmutils/kernel/function.scm")
+(include "kernel/modarith.scm")
+(include "kernel/diff.scm")
+(include "kernel/deriv.scm")
+(include "kernel/operator.scm")
+(include "kernel/function.scm")
 
 ;; references symbolic-environment
-(include "./scmutils/kernel/numbers.scm")
-(include "./scmutils/kernel/vectors.scm")
-(include "./scmutils/kernel/structs.scm")
-(include "./scmutils/kernel/matrices.scm")
-(include "./scmutils/kernel/quaternion.scm")
-(include "./scmutils/kernel/pseries.scm")
+(include "kernel/numbers.scm")
+(include "kernel/vectors.scm")
+(include "kernel/structs.scm")
+(include "kernel/matrices.scm")
+(include "kernel/quaternion.scm")
+(include "kernel/pseries.scm")
 
-(include "./scmutils/kernel/numsymb.scm")
+(include "kernel/numsymb.scm")
 
-(include "./scmutils/kernel/heuristic.scm")
+(include "kernel/heuristic.scm")
 
-(include "./scmutils/kernel/fbe-genenv.scm")
+(include "kernel/fbe-genenv.scm")
 
-(include "./scmutils/kernel/custom-repl.scm")
+(include "kernel/custom-repl.scm")
 
 ;;;; **** Simplifier loader  **********************************
 
@@ -1226,18 +1226,18 @@
 ;;;  which is, in turn, based on Polynomial Canonical Form.
 
 ;;;The following two files must be loaded in the given order.
-(include "./scmutils/simplify/pcf.scm")
-(include "./scmutils/simplify/rcf.scm")
+(include "simplify/pcf.scm")
+(include "simplify/rcf.scm")
 
 ;;; We need flattened polynomials to support rule-based simplifiers.
 
-(include "./scmutils/simplify/fpf.scm")
+(include "simplify/fpf.scm")
 
 ;;; Canonical simplifiers are glued together with SIMPLIFY.
 
-(include "./scmutils/simplify/simplify.scm")
+(include "simplify/simplify.scm")
 
-(include "./scmutils/simplify/split-poly.scm")
+(include "simplify/split-poly.scm")
 
 ;;; Rule-based simplifiers
 
@@ -1255,122 +1255,122 @@
 ;;; (define (rule-memoize f) (hash-memoize-1arg f))
 
 ;;(include "syntax" scmutils-base-environment)
-(include "./scmutils/simplify/fbe-syntax.scm")
-(include "./scmutils/simplify/rule-syntax.scm")
-(include "./scmutils/simplify/matcher.scm")
-(include "./scmutils/simplify/rule-simplifier.scm")
+(include "simplify/fbe-syntax.scm")
+(include "simplify/rule-syntax.scm")
+(include "simplify/matcher.scm")
+(include "simplify/rule-simplifier.scm")
 
 ;;; FBE: tried to make this a module, but can't make it work. Try
 ;;; loading it directly into 'scmutils-base-environment'.
 ;;(load "rules" rule-environment)
-(include "./scmutils/simplify/rules.scm")
+(include "simplify/rules.scm")
 
 #;
 (define (default-simplify exp)
   (new-simplify (expression exp)))
 
-(include "./scmutils/simplify/default.scm")
+(include "simplify/default.scm")
 
-(include "./scmutils/simplify/sparse.scm")
-(include "./scmutils/simplify/sparse-interpolate.scm")
-(include "./scmutils/simplify/sparse-gcd.scm")
+(include "simplify/sparse.scm")
+(include "simplify/sparse-interpolate.scm")
+(include "simplify/sparse-gcd.scm")
 
-(include "./scmutils/simplify/pcf-fpf.scm")
+(include "simplify/pcf-fpf.scm")
 
 (define symbolic-operators
   (hash-table/key-list symbolic-operator-table))
 
 ;; ;;;; **** Display  **********************************
 
-(include "./scmutils/display/print.scm")
+(include "display/print.scm")
 
-(include "./scmutils/display/fbe-exdisplay.scm")
+(include "display/fbe-exdisplay.scm")
 
-(include "./scmutils/display/suppress-args.scm")
+(include "display/suppress-args.scm")
 
 ;;;; **** Enclose  **********************************
 
-(include "./scmutils/enclose/comcon.scm")
-(include "./scmutils/enclose/fbe-magic.scm")
+(include "enclose/comcon.scm")
+(include "enclose/fbe-magic.scm")
 
 ;;; FBE: uses structures.
-;; (include "./scmutils/enclose/jinx-utils.scm")
-;; (include "./scmutils/enclose/jinx-cselim.scm")
-(include "./scmutils/enclose/fbe-jinx-cselim.scm")
+;; (include "enclose/jinx-utils.scm")
+;; (include "enclose/jinx-cselim.scm")
+(include "enclose/fbe-jinx-cselim.scm")
 
-(include "./scmutils/enclose/enclose.scm")
+(include "enclose/enclose.scm")
 
 ;;(include "opaque" scmutils-base-environment)
 
 ;;;; **** Numerics  **********************************
 
 ;;; signals/cph-dsp
-(include "./scmutils/numerics/signals/cph-dsp/flovec.scm")
+(include "numerics/signals/cph-dsp/flovec.scm")
 
 ;; ;;; quadrature
-(include "./scmutils/numerics/quadrature/rational.scm")
-(include "./scmutils/numerics/quadrature/quadrature.scm")
-(include "./scmutils/numerics/quadrature/defint.scm")
+(include "numerics/quadrature/rational.scm")
+(include "numerics/quadrature/quadrature.scm")
+(include "numerics/quadrature/defint.scm")
 
 ;;; extrapolate
-(include "./scmutils/numerics/extrapolate/re.scm") ; fundamental
+(include "numerics/extrapolate/re.scm") ; fundamental
 
 ;;; optimize
-(include "./scmutils/numerics/optimize/unimin.scm") ; fundamental
-(include "./scmutils/numerics/optimize/multimin.scm") ; fundamental
-(include "./scmutils/numerics/optimize/optimize.scm") ; fundamental
+(include "numerics/optimize/unimin.scm") ; fundamental
+(include "numerics/optimize/multimin.scm") ; fundamental
+(include "numerics/optimize/optimize.scm") ; fundamental
 
 ;;; linear
-(include "./scmutils/numerics/linear/singular.scm") ; fundamental
+(include "numerics/linear/singular.scm") ; fundamental
 
-(include "./scmutils/numerics/linear/full-pivot.scm") ; fundamental
-(include "./scmutils/numerics/linear/gauss-jordan.scm") ; fundamental
-(include "./scmutils/numerics/linear/lu.scm") ; fundamental
-(include "./scmutils/numerics/linear/svd.scm") ; fundamental
-(include "./scmutils/numerics/linear/vandermonde.scm") ; fundamental
+(include "numerics/linear/full-pivot.scm") ; fundamental
+(include "numerics/linear/gauss-jordan.scm") ; fundamental
+(include "numerics/linear/lu.scm") ; fundamental
+(include "numerics/linear/svd.scm") ; fundamental
+(include "numerics/linear/vandermonde.scm") ; fundamental
 
-(include "./scmutils/numerics/linear/eigen.scm") ; fundamental
+(include "numerics/linear/eigen.scm") ; fundamental
 
 ;;; ode
-(include "./scmutils/numerics/ode/advance.scm")
-(include "./scmutils/numerics/ode/qc.scm")
-(include "./scmutils/numerics/ode/bulirsch-stoer.scm")
-(include "./scmutils/numerics/ode/be.scm")
-(include "./scmutils/numerics/ode/gear.scm")
-(include "./scmutils/numerics/ode/ode-advancer.scm")
-(include "./scmutils/numerics/ode/interface.scm")
+(include "numerics/ode/advance.scm")
+(include "numerics/ode/qc.scm")
+(include "numerics/ode/bulirsch-stoer.scm")
+(include "numerics/ode/be.scm")
+(include "numerics/ode/gear.scm")
+(include "numerics/ode/ode-advancer.scm")
+(include "numerics/ode/interface.scm")
 
 ;;; statistics
-(include "./scmutils/numerics/statistics/cluster.scm") ; fundamental
+(include "numerics/statistics/cluster.scm") ; fundamental
 
-(include "./scmutils/numerics/statistics/gauss.scm") ; fundamental
+(include "numerics/statistics/gauss.scm") ; fundamental
 
-(include "./scmutils/numerics/statistics/moments.scm") ; fundamental
+(include "numerics/statistics/moments.scm") ; fundamental
 
 ;;; functions
 
-(include "./scmutils/numerics/functions/bessel.scm")
-(include "./scmutils/numerics/functions/elliptic.scm")
+(include "numerics/functions/bessel.scm")
+(include "numerics/functions/elliptic.scm")
 
 ;;; roots
 
-(include "./scmutils/numerics/roots/bisect.scm")
-(include "./scmutils/numerics/roots/zbrent.scm")
-(include "./scmutils/numerics/roots/zeros.scm")
-(include "./scmutils/numerics/roots/newton-kahan.scm")
-(include "./scmutils/numerics/roots/multidimensional.scm")
+(include "numerics/roots/bisect.scm")
+(include "numerics/roots/zbrent.scm")
+(include "numerics/roots/zeros.scm")
+(include "numerics/roots/newton-kahan.scm")
+(include "numerics/roots/multidimensional.scm")
 
 ;; ;;; signals/cph-dsp (rest)
 
 ;;; These are loaded in user-initial-environment
-;; (include "./scmutils/numerics/signals/cph-dsp/mathutil.scm")
-(include "./scmutils/numerics/signals/cph-dsp/fft.scm")
-(include "./scmutils/numerics/signals/cph-dsp/white.scm")
+;; (include "numerics/signals/cph-dsp/mathutil.scm")
+(include "numerics/signals/cph-dsp/fft.scm")
+(include "numerics/signals/cph-dsp/white.scm")
 
 ;;;; **** Poly  **********************************
 
 ;;; Hairy polynomial rootfinder.  Not so good, but I tried (GJS)
-(include "./scmutils/poly/polyroot.scm")
+(include "poly/polyroot.scm")
 
 ;;; The Polynomial Interpolator: generic code.
 ;;; export = (Lagrange-interpolation-function ys xs)
@@ -1381,7 +1381,7 @@
 
 ;;; A compiled Polynomial Interpolator: fast numerical code.
 ;;; export = (lagrange-interpolation-function ys xs)
-(include "./scmutils/poly/interp.scm")
+(include "poly/interp.scm")
 
 
 ;;;     Halfant stuff
@@ -1392,19 +1392,19 @@
 ;;;     Actual polynomial codes (requires pcf)
 ;;; Shifts and scales polynomial domains,
 ;;; makes interpolation polynomials, estimates errors.
-(include "./scmutils/poly/polyinterp.scm")
+(include "poly/polyinterp.scm")
 
 ;;; Legendre polynomials
-(include "./scmutils/poly/legendre.scm")
+(include "poly/legendre.scm")
 
 ;;; Hermite interpolators (splines)
-(include "./scmutils/poly/hermite.scm")
+(include "poly/hermite.scm")
 
 ;;; Chebyshev expansions, economization
-(include "./scmutils/poly/nchebpoly.scm")
+(include "poly/nchebpoly.scm")
 
 ;;; Piecewise polynomial approximations; good function memoizers
-(include "./scmutils/poly/ppa.scm")
+(include "poly/ppa.scm")
 
 ;;;; **************************************
 
@@ -1412,21 +1412,21 @@
 
 ;;;; **************************************
 
-(include "./scmutils/kernel/litfun.scm")
+(include "kernel/litfun.scm")
 
 ;;;; **** Solve  **********************************
 
-(include "./scmutils/solve/solve.scm")
+(include "solve/solve.scm")
 
 ;; ;;;; **** Units  **********************************
 
-(include "./scmutils/units/units.scm")
-;;(include "./scmutils/units/system.scm")
-(include "./scmutils/units/fbe-system.scm")
-(include "./scmutils/units/with-units.scm")
+(include "units/units.scm")
+;;(include "units/system.scm")
+(include "units/fbe-system.scm")
+(include "units/with-units.scm")
 
 ;;(include "SI-units"   generic-environment)
-(include "./scmutils/units/fbe-SI-units.scm")
+(include "units/fbe-SI-units.scm")
 
 ;; (include "hms-dms-radians" generic-environment)
 
@@ -1442,25 +1442,25 @@
 
 ;;; FBE: some constants like ':pi' are already defined and needed
 ;;; before this point -> commented out
-(include "./scmutils/units/fbe-constants.scm") ; FBE
+(include "units/fbe-constants.scm") ; FBE
 
 ;;;; **************************************
 
-(include "./scmutils/calculus/fbe-coord.scm")
-(include "./scmutils/calculus/frame-maker.scm")
+(include "calculus/fbe-coord.scm")
+(include "calculus/frame-maker.scm")
 
 ;;; FBE: Instead of creating 'symbolic-environment' we create the module
 ;;; 'symbolic-module' which we use in 'fbe-syntax'.
 ;;(include "symbenv" scmutils-base-environment)
-(include "./scmutils/simplify/fbe-symbenv.scm")
+(include "simplify/fbe-symbenv.scm")
 
 ;; ;; a couple of functions in 'scmutils-base-environment' which refer to
 ;; ;; the 'generic-environment'.
-;; (include "./scmutils/units/system-generic-env.scm")
+;; (include "units/system-generic-env.scm")
 
 ;; ;;;; **** Mechanics  **********************************
 
-(include "./scmutils/mechanics/sections.scm")
+(include "mechanics/sections.scm")
 
 ;;;; **** Initialize library ************************************************
 
