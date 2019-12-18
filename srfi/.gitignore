@@ -1,0 +1,8 @@
+.bzr
+srfi
+.bzrignore
+.#*
+*~
+*!*
+*\**
+

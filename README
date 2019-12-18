@@ -1,0 +1,17 @@
+* Description
+
+This is a port of Scmutils to Chez Scheme on Windows. This package contains several parts:
+1. fedeinthemix/chez-scmutils: https://github.com/fedeinthemix/chez-scmutils
+2. chclock/srfi: https://github.com/chclock/srfi
+3. fedeinthemix/chez-mit: https://github.com/fedeinthemix/chez-mit
+
+* Usage
+
+Load the libraries in the REPL:
+
+#+BEGIN_SRC scheme
+  (import (scmutils base)
+          (scmutils generic)
+          (scmutils calculus))
+  (start-scmutils-print!)
+#+END_SRC

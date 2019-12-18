@@ -1,0 +1,77 @@
+Scheme Requests for Implementation (SRFIs), as R6RS libraries
+-------------------------------------------------------------
+
+The libraries' names conform to SRFI 97: SRFI Libraries.  There is a registry of
+available SRFIs and other platform features which works alongside SRFI 0:
+Feature-Based Conditional Expansion.  The porting done so far is mostly just
+taking the reference implementations from http://srfi.schemers.org and wrapping
+them in libraries and tweaking the few things needed to make them work in R6RS
+libraries and with implementations' functionality.  Supporting any R6RS
+implementation supporting the *.IMPL.sls convention is easy.
+
+These SRFIs are available:
+  (srfi s0 cond-expand)
+  (srfi s1 lists)
+  (srfi s2 and-let)
+  (srfi s5 let)
+  (srfi s6 basic-string-ports)
+  (srfi s8 receive)
+  (srfi s9 records)
+  (srfi s11 let-values)
+  (srfi s13 strings)
+  (srfi s14 char-sets)
+  (srfi s16 case-lambda)
+  (srfi s17 generalized-set!)
+  (srfi s19 time)
+  (srfi s23 error)
+  (srfi s25 multi-dimensional-arrays)
+  (srfi s26 cut)
+  (srfi s27 random-bits)
+  (srfi s28 basic-format-strings)
+  (srfi s31 rec)
+  (srfi s37 args-fold)
+  (srfi s38 with-shared-structure)
+  (srfi s39 parameters)
+  (srfi s41 streams)
+  (srfi s42 eager-comprehensions)
+  (srfi s43 vectors)
+  (srfi s45 lazy)
+  (srfi s48 intermediate-format-strings)
+  (srfi s60 integer-bits)
+  (srfi s61 cond)
+  (srfi s64 testing)
+  (srfi s67 compare-procedures)
+  (srfi s69 basic-hash-tables)
+  (srfi s78 lightweight-testing)
+  (srfi s89 optional-parameters)
+  (srfi s98 os-environment-variables)
+  (srfi s99 records)
+  (srfi s111 boxes)
+  (srfi s143 fixnums)
+
+NOTE: We use 's' instead of ':' because files with ':' are not supported in
+Windows.
+NOTE2: SRFI 89 is implemented using symbols ending in ':' as keywords, which
+need to be quoted. This is not fully compliant with the standard.
+
+Other SRFIs are not available because there hasn't been a demand for them or
+they're not possible as an R6RS library.  If you already have ported SRFIs to
+R6RS, we'd love to assimilate them.  You can let us know by "asking a question"
+at the Scheme Libraries project page:
+
+  https://launchpad.net/scheme-libraries
+
+Currently supported systems are Chez Scheme, Ikarus, Larceny, and Ypsilon.
+PLT Scheme is only semi-supported because it has its own "srfi" directory
+which conflicts with having another "srfi" directory; you can symlink/copy
+files from this collection into PLT's "srfi" directory.
+
+For the latest development version, go to:
+
+  https://code.launchpad.net/~scheme-libraries-team/scheme-libraries/srfi
+
+Bug Reporting:
+--------------
+Submit bug reports at:
+
+  https://bugs.launchpad.net/scheme-libraries/+filebug
